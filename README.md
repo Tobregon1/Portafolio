@@ -63,8 +63,8 @@ cd portfolio
 - Diseño responsive y ligero (sin frameworks).
 🔗 Conectá conmigo
 
-[https://www.linkedin.com/in/tobiasobreg%C3%B3n-2o25t0b/]LinkedIn
+[https://www.linkedin.com/in/tobiasobreg%C3%B3n-2o25t0b/](LinkedIn)
 
-[https://github.com/Tobregon1GitHub]GitHub
+[https://github.com/Tobregon1GitHub](GitHub)
 
 ¡Éxitos! 🚀
