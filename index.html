@@ -266,3 +266,70 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      min-height: 2000px; /* Para permitir scroll */
+    }
+
+    /* Botón flotante moderno */
+    #btnSubir {
+      display: none;
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 100;
+      width: 50px;
+      height: 50px;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4A90E2, #357ABD);
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    /* Efecto hover */
+    #btnSubir:hover {
+      transform: translateY(-4px);
+      background: linear-gradient(135deg, #5AA6F2, #4A90E2);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- Botón -->
+  <button onclick="irArriba()" id="btnSubir">↑</button>
+
+  <script>
+    // Mostrar u ocultar el botón según scroll
+    window.onscroll = function() {mostrarBoton()};
+
+    function mostrarBoton() {
+      let boton = document.getElementById("btnSubir");
+      if (document.documentElement.scrollTop > 250) {
+        boton.style.display = "block";
+      } else {
+        boton.style.display = "none";
+      }
+    }
+
+    // Subir suavemente
+    function irArriba() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
