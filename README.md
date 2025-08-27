@@ -1,6 +1,6 @@
 # Portafolio — Tobias Obregón
 Bienvenido a mi portafolio personal 🚀  
-Aquí muestro quién soy, mi experiencia como **Software Developer** y, en un futuro, mis proyectos personales.
+Aquí muestro quién soy, mi experiencia como **Software Developer** y mis proyectos personales
 
 ## 📌 Tecnologías utilizadas
 - **HTML5**
