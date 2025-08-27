@@ -61,8 +61,8 @@ cd portfolio
 - Semántica HTML5 + navegación por teclado.
 - `skip-link` para salto al contenido.
 - Diseño responsive y ligero (sin frameworks).
-🔗 Conectá conmigo
 
+🔗 Conectá conmigo
 [https://www.linkedin.com/in/tobiasobreg%C3%B3n-2o25t0b/](https://www.linkedin.com/in/tobiasobreg%C3%B3n-2o25t0b/)
 
 [https://github.com/Tobregon1GitHub](https://github.com/Tobregon1GitHub)
