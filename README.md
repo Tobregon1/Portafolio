@@ -10,7 +10,7 @@ Aquí muestro quién soy, mi experiencia como **Software Developer** y mis proye
 
 ## 🖥️ Deploy
 El portafolio está publicado con **GitHub Pages** en el siguiente enlace:  
-👉 [https://tobregon1.github.io/portfolio/](https://tobregon1.github.io/portfolio/)
+👉 [https://tobregon1.github.io/portfolio/](https://tobregon1.github.io/portfolio/](https://tobregon1.github.io/Portafolio/))
 
 ## 📂 Estructura del proyecto
 ```
