@@ -1,6 +1,33 @@
 # Portafolio — Tobias Obregón
+Bienvenido a mi portafolio personal 🚀  
+Aquí muestro quién soy, mi experiencia como **Software Developer** y, en un futuro, mis proyectos personales.
 
-Portafolio estático, profesional, listo para desplegar (GitHub Pages, Netlify, Vercel, etc.).
+## 📌 Tecnologías utilizadas
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **SEO / Metadatos** (Open Graph, Twitter Cards, JSON-LD)
+
+## 🖥️ Deploy
+El portafolio está publicado con **GitHub Pages** en el siguiente enlace:  
+👉 [https://tobregon1.github.io/portfolio/](https://tobregon1.github.io/portfolio/)
+
+## 📂 Estructura del proyecto
+```
+portfolio/
+│── index.html # Página principal
+│── styles.css # Estilos globales
+│── script.js # Lógica JS
+│── assets/ # Imágenes, íconos, favicon
+```
+
+## ⚡ Cómo correrlo en local
+Clonar el repositorio y abrir el archivo `index.html` en el navegador:
+
+```bash
+git clone https://github.com/Tobregon1/portfolio.git
+cd portfolio
+```
 
 ## Cómo editar
 1. Abrí `index.html` y reemplazá:
@@ -35,13 +62,5 @@ Portafolio estático, profesional, listo para desplegar (GitHub Pages, Netlify, 
 - `skip-link` para salto al contenido.
 - Diseño responsive y ligero (sin frameworks).
 
-## Estructura
-```
-.
-├── index.html
-├── styles.css
-├── script.js
-└── assets/
-```
 
 ¡Éxitos! 🚀
