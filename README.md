@@ -25,5 +25,3 @@ portfolio/
 
 - [linkedin](https://www.linkedin.com/in/tobiasobreg%C3%B3n-2o25t0b/)
 - [GitHub](https://github.com/Tobregon1GitHub)
-
-¡Éxitos! 🚀
