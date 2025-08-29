@@ -6,7 +6,6 @@ Aquí muestro quién soy, mi experiencia como **Software Developer** y mis proye
 - **HTML5**
 - **CSS3**
 - **JavaScript**
-- **SEO / Metadatos** (Open Graph, Twitter Cards, JSON-LD)
 
 ## Deploy
 El portafolio está publicado con **GitHub Pages** en el siguiente enlace:  
