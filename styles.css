@@ -15,7 +15,7 @@ img { max-width: 100%; display: block; }
 a { color: #0a84ff; text-decoration: none; }
 a:hover { text-decoration: underline; }
 :root {
-  --container: 1100px;
+  --container: 1400px; /* aumentado para permitir secciones más anchas */
   --pad: 20px;
   --radius: 12px;
   --shadow: 0 8px 30px rgba(0,0,0,.08);
@@ -73,8 +73,20 @@ a:hover { text-decoration: underline; }
 /* ====== Hero ====== */
 .section { padding: 72px 0; }
 .section.alt { background: var(--bg-alt); }
-.hero { padding-top: 96px; }
-.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+.hero { 
+  padding-top: 96px;
+  max-width: var(--container); /* ahora usará el valor aumentado */
+  margin: 0 auto;
+  padding-left: 3rem;   /* aumentar padding para respirar, o bajar si quieres que llegue más al borde */
+  padding-right: 3rem;
+  width: 100%;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr; /* dar un poco más de ancho a la columna derecha (tarjeta) */
+  gap: 64px;
+  align-items: start; /* alinear arriba para que el texto se vea bien */
+}
 .hero .lead { color: var(--muted); font-size: 1.1rem; }
 .highlight { background: linear-gradient(90deg, #0a84ff 0%, #44c0ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
@@ -87,6 +99,95 @@ a:hover { text-decoration: underline; }
   padding: 16px;
   box-shadow: var(--shadow);
   background: #fff;
+}
+.card-text h3 { margin-top: 0; }
+
+/* ====== Card with image ====== */
+.card-with-image {
+  /* Aumentado para que use todo el ancho disponible y dar más espacio al texto */
+  --card-gap: -2.55rem;
+
+  display: flex;
+  align-items: flex-start;
+  gap: var(--card-gap);
+  background: #fff;
+  padding: 2rem 2.5rem; /* un poco más de padding para equilibrio */
+  border-radius: 50px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+  width: 100%;
+  max-width: none;    /* permitir que la tarjeta se expanda dentro de su columna */
+  margin: 0;
+  justify-self: stretch;
+}
+
+/* Dar más espacio al bloque de texto y permitir que ocupe la mayor parte */
+.card-with-image .card-text {
+  flex: 1 1 auto;
+  min-width: 0;              /* permite truncar flexchild correctamente */
+  padding-right: -1rem;
+  word-break: normal;
+  white-space: normal;
+  hyphens: auto;
+}
+
+/* Mostrar párrafos/links como bloques normales para envolver bien el texto */
+.card-with-image .card-text p,
+.card-with-image .card-text span,
+.card-with-image .card-text a {
+  display: block;
+  margin: 0 0 1.75rem;
+  line-height: 1.95;
+}
+
+/* títulos y párrafos con buen interlineado */
+.card-with-image .card-text h3 {
+  margin: 2.5rem 0 0.75rem;
+  font-size: 1.55rem;
+  line-height: 1.25;
+  font-weight: 7000;
+}
+
+/* Mantener la imagen a la derecha ocupando espacio fijo */
+.card-with-image .card-image {
+  flex: 0 0 200px; /* ancho fijo para la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* tamaño de la imagen */
+.card-with-image .card-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 12px rgba(10,132,255,0.22);
+}
+
+/* Ajustes responsive */
+@media (max-width: 1200px) {
+  .card-with-image { padding: 2rem; }
+  .card-with-image .card-image { flex: 0 0 200px; }
+  .card-with-image .card-image img { width: 200px; height: 200px; }
+}
+
+@media (max-width: 980px) {
+  .card-with-image {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .card-with-image .card-text { padding-right: 0; }
+  .card-with-image .card-image { flex: none; }
+  .card-with-image .card-image img { width: 140px; height: 140px; }
+}
+@media (max-width: 980px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero-card { justify-self: center; }
 }
 .cta { display: flex; gap: .75rem; margin-top: 1rem; flex-wrap: wrap; }
 .btn {
@@ -162,4 +263,61 @@ a:hover { text-decoration: underline; }
 /* ====== Responsiveness ====== */
 @media (max-width: 980px) {
   .hero-grid { grid-template-columns: 1fr; }
+}
+
+/* ====== Hero banner (inserte encima de la tarjeta derecha) ====== */
+.hero-banner {
+  position: relative;
+  color: #ffffff;
+  /* Aumentado el padding vertical y alto mínimo para que se vea más la imagen */
+  padding: 10rem 1rem;
+  min-height: 470px;
+
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  box-shadow: 0 8px 24px rgba(126, 190, 255, 0.12);
+  margin-bottom: 18px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #3b9dff 0%, #aee4ff 100%);
+}
+
+/* imagen de fondo en una capa separada */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('./assets/Tobi.png'); /* <- ajusta nombre/ruta */
+  background-size: cover;         /* muestra toda la imagen ocupando el área */
+  background-position: center;    /* prueba 'center right' o 'center left' si quieres otra zona visible */
+  background-repeat: no-repeat;
+  opacity: 0.18;                  /* baja para no interferir con el texto */
+  filter: blur(0px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* mantener contenido encima */
+.hero-banner > * { position: relative; z-index: 1; }
+
+/* estilos de texto en la sección izquierda */
+.hero-banner .banner-left {
+  font-size: 1.35rem;      /* aumenta tamaño (prueba 1.35rem si quieres más grande) */
+  font-weight: 800;        /* semi-bold para mejor legibilidad */
+  line-height: 1.3;        /* espaciado entre líneas */
+  letter-spacing: -0.2px;  /* ajusta el espaciado entre letras */
+}
+
+/* ajuste responsive para móviles */
+@media (max-width: 980px) {
+  .hero-banner .banner-left {
+    font-size: 1.1rem;
+  }
+  .hero-banner {
+    padding: .9rem .75rem;
+    min-height: 72px;
+  }
+  .hero-banner::before { opacity: 0.12; background-position: center; }
 }

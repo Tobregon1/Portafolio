@@ -6,9 +6,10 @@ Aquí muestro quién soy, mi experiencia como **Software Developer** y mis proye
 - **HTML5**
 - **CSS3**
 - **JavaScript**
+- **SEO / Metadatos** (Open Graph, Twitter Cards, JSON-LD)
 
 ## Deploy
-El portafolio está publicado con **Netlify App** en el siguiente enlace:  
+El portafolio está publicado con **GitHub Pages** en el siguiente enlace:  
 👉 [https://tobregon1.github.io/portfolio/](https://tobias-obr-portafolio.netlify.app/)
 
 ## 📂 Estructura del proyecto
